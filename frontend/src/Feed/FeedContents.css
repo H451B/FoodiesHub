@@ -1,0 +1,24 @@
+.FeedCard {
+  /* margin: 25px 20px 20px 30px; */
+  margin: 25px auto 30px auto;
+  width: 80%;
+  background-color: white;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.Reactions {
+  display: flex;
+  border-top: 1px solid rgb(194, 194, 194);
+}
+.LeftReaction,
+.RightReaction {
+  text-align: center;
+  /* display: flex; */
+  width: 49%;
+}
+.Seperator {
+  margin-top: 5px;
+  background: rgb(194, 194, 194);
+  width: 0.2%;
+}

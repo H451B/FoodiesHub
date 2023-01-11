@@ -1,0 +1,42 @@
+.FoodNav,
+.RestaurantNav {
+  margin-top: 20px;
+  margin-right: 99px;
+  display: flex;
+  flex-direction: column;
+}
+.FoodNav {
+  margin-bottom: 80px;
+}
+.RightNavBtn {
+  margin-top: 10px;
+  background: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  height: 45px;
+  width: 200px;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.RightNavBtn.fbn1 {
+  box-shadow: 0 2px 2px 0 #ffc89f, 0 3.5px 3.5px 0 #ffc89f;
+}
+.RightNavBtn.fbn2 {
+  box-shadow: 0 2px 2px 0 #f5916b, 0 3.5px 3.5px 0 #f5916b;
+}
+.RightNavBtn.fbn3 {
+  box-shadow: 0 2px 2px 0 #b95d3b, 0 3.5px 3.5px 0 #b95d3b;
+}
+
+.RightNavBtn.rbn1 {
+  box-shadow: 0 2px 2px 0 #8cb7a5, 0 3.5px 3.5px 0 #8cb7a5;
+}
+.RightNavBtn.rbn2 {
+  box-shadow: 0 2px 2px 0 #629290, 0 3.5px 3.5px 0 #629290;
+}
+.RightNavBtn.rbn3 {
+  box-shadow: 0 2px 2px 0 #436c76, 0 3.5px 3.5px 0 #436c76;
+}

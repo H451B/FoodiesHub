@@ -1,0 +1,139 @@
+:root {
+  --alpha-color: rgba(255, 225, 179, 0.952);
+  --beta-color: #285954;
+
+  --alpha-shadow: 0 1px 3px rgba(0, 0, 0, 0.18), 0 1px 2px rgba(0, 0, 0, 0.18);
+}
+.bgnormal {
+  /* background: rgba(0, 184, 148, 1); */
+  background: #fff2de;
+  max-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+}
+.bgpersonal {
+  /* background: rgba(9, 132, 227, 1); */
+  background: white;
+  /* background-color: rgba(9, 132, 227,1.0); */
+}
+
+#topimage {
+  height: 100px;
+}
+
+/* .card:hover {
+  outline: 0.1rem solid #285954;
+} */
+
+/* order cart item styles */
+#cart-item-card .item-card-body {
+  background: #ebbab7;
+  /* color: #E9F5F3; */
+
+  height: 20%;
+  /* width: 50%; */
+  padding: 0.2rem;
+  margin: 1.5rem;
+}
+#cart-item-card .item-card-body .item-card-image {
+  width: auto;
+}
+/* #cart-item-card .item-card-body .item-card-btn{
+  font-size: 0.8rem;
+  margin: auto;
+  width: 0;
+  height: 0.1rem;
+} */
+#cart-item-card .item-card-body .item-counter {
+  font-size: 0.8rem;
+  margin: auto;
+  /* width: 0; */
+  /* height: 0.1rem; */
+}
+#cart-item-card .item-card-body .cart-item-amount {
+  margin: auto;
+}
+
+/* order cart body styles */
+
+#order-cart {
+  background: rgb(214, 117, 26);
+  padding: 1.5rem;
+}
+#order-cart .cart-item-list {
+  max-height: 30rem;
+  overflow: auto;
+  background: rgb(250, 227, 177);
+}
+#order-cart .order-cart-btn div {
+  padding-right: 1rem;
+}
+#order-cart .order-cart-btn div button {
+  margin: auto;
+  background: rgb(146, 242, 232);
+  font-size: 1rem;
+}
+
+/* order confirmation styles */
+
+#ordersummary .ordersummarylist {
+  height: 10rem;
+}
+
+#order-cart .order-confirmation-info {
+  background: rgb(250, 227, 177);
+  color: rgb(21, 44, 65);
+  font-weight: 2rem;
+  padding: 0.5rem;
+  /* height: 15rem; */
+  /* overflow: hidden; */
+}
+
+/* delivery vendors item styles */
+#deliveryvendors .deliveryvendorsbody div{
+  height: 8rem;
+  width: fit-content;
+}
+
+/* delivery summary styles */
+
+#deliverysummary .deliverysummaryinfo {
+  line-height: 0.8rem;
+  /* font-weight: 2rem; */
+}
+
+/* payment vendors styles */
+#paymentvendors .paymentvendorsbody button {
+  height: 8rem;
+  width: 6rem;
+}
+
+#checkoutinfo {
+  background: rgb(250, 227, 177);
+  color: rgb(21, 44, 65);
+  font-weight: 2rem;
+  padding: 0.5rem;
+}
+
+/* user sign modal styles
+.user-sign-modal{
+  background:rgba(255, 225, 179, 0);
+} */
+

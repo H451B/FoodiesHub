@@ -1,0 +1,154 @@
+.feed-container {
+  /* background: rgb(231, 231, 231); */
+  background: #fff2de;
+  overflow: hidden;
+}
+
+.main-container {
+  padding: 5px;
+}
+
+.feed-left {
+  padding: 10px;
+  border-right: 1px solid rgb(184, 182, 182);
+}
+
+.feed-events-area {
+  width: 80%;
+  margin: auto;
+}
+.feed-event {
+  border-radius: 3px;
+  /* width: 80%; */
+  text-align: center;
+  height: 40px;
+  background: white;
+  box-shadow: var(--alpha-shadow);
+  margin: 10px auto 0 auto;
+}
+
+.feed-tags-area {
+  width: 80%;
+  margin: 20px auto;
+}
+.feed-tags {
+  /* margin: 20px auto; */
+  padding: 3px;
+  /* width: 80%; */
+  /* background: white; */
+  /* box-shadow: var(--alpha-shadow); */
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.feed-tag {
+  background: rgb(192, 192, 192);
+  height: 30px;
+  margin: 3px;
+  width: max-content;
+  padding: 0 3px 0 3px;
+}
+
+.feed-main {
+  border-right: 1px solid rgb(184, 182, 182);
+}
+
+.feed-right-calender {
+  width: 80%;
+  margin: 20px auto;
+  background: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* MINI SEARCH BAR */
+.search-container {
+  width: 80%;
+  margin: 15px auto 25px auto;
+  background: white;
+  display: flex;
+  height: 35px;
+}
+.search-inp {
+  width: 85%;
+}
+.search-ico {
+  text-align: center;
+  width: 15%;
+  color: white;
+  background: var(--beta-color);
+}
+
+/* ADD-TO-FEED */
+.addtofeed-container {
+  margin: 16px auto 0 auto;
+  border-radius: 5px;
+  height: 150px;
+  width: 80%;
+  background: white;
+  box-shadow: var(--alpha-shadow);
+  padding: 10px;
+  display: flex;
+}
+.addtofeed-left {
+  width: 85%;
+  margin-right: 7px;
+}
+.addtofeed-left-top {
+  width: 100%;
+  display: flex;
+}
+.addtofeed-left-bottom {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+}
+.addtofeed-left-bottom button {
+  width: 50%;
+  margin: 2px;
+  /* height: 100%; */
+  background: var(--beta-color);
+  color: white;
+  border-radius: 3px;
+}
+.addtofeed-inp {
+  width: 100%;
+  height: 100px;
+}
+.addtofeed-right {
+  width: 15%;
+  height: 130px;
+  background: var(--beta-color);
+  color: white;
+  border-radius: 3px;
+}
+.addtofeed-right button {
+  width: 100%;
+  height: 100%;
+}
+
+/* ADD TO FEED FLOAT */
+.add-to-feed-float {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: var(--beta-color);
+  color: white;
+  text-align: center;
+}
+.float-add-to-feed-modal {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+  width: 30rem;
+}
+.modal-open {
+  overflow-y: hidden;
+}

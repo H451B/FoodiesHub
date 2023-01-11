@@ -1,0 +1,41 @@
+.HomeIntro {
+  padding-top: 10%;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.search-container- {
+  margin-left: 30px;
+  width: 55%;
+  height: 60px;
+}
+
+.FeedText {
+  margin-left: 100px;
+  margin-top: 5rem;
+  /* text-align: center; */
+}
+span {
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.sec-1 {
+  height: 85vh;
+  background-image: url(../img/back_fh.png);
+  /* filter: blur(8px); */
+  /* -webkit-filter: blur(8px); */
+  /* background-size: 10px; */
+  /* height: 10px; */
+  background-position: right bottom;
+  background-size: 550px;
+  background-repeat: no-repeat;
+  /* background: linear-gradient(white, grey); */
+  padding-left: 10px;
+  padding-right: 10px;
+  /* opacity: 0.5; */
+  box-shadow: 0 3px 3px 0 rgba(255, 225, 179, 0.952),
+    0 1px 1px 0 rgba(255, 237, 189, 0.952);
+}
+.sec-3 {
+  margin-left: 80px;
+}
