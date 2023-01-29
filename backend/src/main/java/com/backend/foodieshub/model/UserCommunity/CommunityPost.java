@@ -9,6 +9,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -23,13 +25,14 @@ import lombok.Setter;
 public class CommunityPost {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String postText;
     
     @NotNull
     @ManyToOne
-    @JoinColumn(name="user_id")
+    @JoinColumn(name="user_id", referencedColumnName = "id", nullable = false)
+    @JsonIgnore
     private Users user;
 }

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.backend.foodieshub.model.UserCommunity.CommunityPost;
 
-// @Repository
+@Repository
 public interface CommunityPostRepository extends JpaRepository<CommunityPost,Integer> {
     
 }
