@@ -36,6 +36,36 @@ span {
   box-shadow: 0 3px 3px 0 rgba(255, 225, 179, 0.952),
     0 1px 1px 0 rgba(255, 237, 189, 0.952);
 }
+
+/* begin */
+/* test media query over background image */
+@media only screen and (max-width: 913px) {
+  /* Styles for tablet screens */
+  .sec-1 {
+    height: 85vh;
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    /* background: linear-gradient(white, grey); */
+    padding-left: 7px;
+    padding-right: 7px;
+    /* opacity: 0.5; */
+    box-shadow: 0 3px 3px 0 rgba(255, 225, 179, 0.952),
+      0 1px 1px 0 rgba(255, 237, 189, 0.952);
+  }
+  .HomeIntro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+/* end */
+
 .sec-3 {
   margin-left: 80px;
 }
