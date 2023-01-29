@@ -25,7 +25,7 @@ import lombok.Setter;
 public class CommunityPost {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
     private String postText;
@@ -33,6 +33,6 @@ public class CommunityPost {
     @NotNull
     @ManyToOne
     @JoinColumn(name="user_id", referencedColumnName = "id", nullable = false)
-    @JsonIgnore
     private Users user;
+    // @JsonIgnore
 }

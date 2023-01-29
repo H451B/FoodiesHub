@@ -8,6 +8,7 @@ import MiniSearch from './MiniSearch'
 import Calendar from 'react-calendar'
 import { BsPlusLg } from "react-icons/bs";
 import { Modal } from 'reactstrap';
+import axios from 'axios';
 
 const Event = [
     'Bye Bye December', 'Victory Day Special', 'Birthday'
@@ -19,15 +20,19 @@ const Tags = [
 
 
 function Feed() {
+
+    //fetching all posts
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://127.0.0.1:5002/feed')
-            .then(res => res.json())
-            .then(data => setPosts(data))
+        axios.get('http://localhost:5002/feed')
+            .then(res => {
+                setPosts(res.data);
+            })
             .catch(err => console.log(err));
     }, []);
 
+    //floating button to make post when scrolling
     const [showFeedFloat, setShowFeedFloat] = useState(0);
     useEffect(() => {
         window.onscroll = () => {
@@ -39,9 +44,11 @@ function Feed() {
         }
     }, []);
 
+    //POPUP when click floating "make post" button
     const [feedModalOpen, setFeedModalOpen] = useState(false);
     const toggle = () => setFeedModalOpen(!feedModalOpen);
 
+    //LEFT SIDE
     const Events = [];
     for (var i = 0; i < Event.length; i++) {
         Events.push(<FeedEvent events={Event[i]} />);
@@ -51,6 +58,7 @@ function Feed() {
     for (var j = 0; j < Tags.length; j++) {
         AllTags.push(<FeedTags tags={Tags[j]} />);
     }
+    //END LEFT SIDE
 
     return (
         <div className='feed-container'>
@@ -79,7 +87,11 @@ function Feed() {
                     <AddToFeed />
 
                     {/* REST API FETCH DATA */}
-                    <FeedContents />
+                    {posts.map(post => (
+                        <div key={post.id}>
+                        <FeedContents data={post}/>
+                      </div>
+                    ))}
                     {/* END REST API FETCH DATA */}
 
                 </div>

@@ -1,12 +1,13 @@
 import React from 'react'
 import { BiLike,BiDislike } from "react-icons/bi";
 import './FeedContents.css'
+import './Feed'
 
-function FeedContents() {
+function FeedContents(props) {
     return (
             <div className="FeedCard shadow-box-example z-depth-5">
-              <h3>Author</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet ipsa consequuntur magnam iste in veritatis reprehenderit natus voluptatum sunt, ex tempora, nemo facilis vitae molestiae assumenda repellendus illum iusto aliquam?</p>
+              <h3>{props.data.user.username}</h3>
+              <p>{props.data.postText}</p>
               <div className="Reactions">
                   <div className="LeftReaction">
                       <BiLike/>

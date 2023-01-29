@@ -49,6 +49,6 @@ public class Users implements Serializable {
     private String address;
     private String password;
 
-    @OneToMany(mappedBy="user", cascade = CascadeType.ALL)
-    private List<CommunityPost> posts;
+    // @OneToMany(mappedBy="user", cascade = CascadeType.ALL)
+    // private List<CommunityPost> posts;
 }
