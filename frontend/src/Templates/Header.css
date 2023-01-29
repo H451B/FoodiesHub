@@ -1,0 +1,64 @@
+.fhlogo {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.header-container {
+  background: var(--beta-color);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0), 0 3px 3px 0 rgba(255, 188, 43, 0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* font-weight: 200; */
+  color: white;
+}
+.nav-link {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  /* padding: 15px 20px; */
+  position: relative;
+  font-weight: bold;
+}
+.nav-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: var(--alpha-color);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+.foodies-profile {
+  color: #ffffff;
+  font-size: 24px;
+  margin-right: 20px;
+}
+.foodies-profile:hover {
+  color: var(--alpha-color);
+}
+.foodies-notification {
+  color: #ffffff;
+  font-size: 24px;
+  margin-right: 15px;
+}
+.foodies-notification:hover {
+  color: var(--alpha-color);
+}
+
+/* user sign modal styles */
+.user-sign-modal {
+  background: rgba(255, 188, 43, 0);
+  float: right;
+  margin-right: 15px;
+  margin-top: 64px;
+  width: 400px;
+}

@@ -1,0 +1,21 @@
+/* DASHBOARD */
+.u-profile-section {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.back-home-btn {
+  position: absolute;
+  bottom: 20px;
+  margin-left: 30px;
+  background: var(--alpha-color);
+}
+
+/* left Navigator */
+
+/* right */
+/* orders */
+.uOrdersDetails {
+  height: 20px;
+  width: 80%;
+}

@@ -1,0 +1,22 @@
+.foodies-footer {
+  background: var(--beta-color);
+  padding: 25px 15px 5px 15px;
+  color: rgb(201, 201, 201);
+  box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.99);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+.copyright {
+  color: white;
+}
+.inp-footer {
+  border-radius: 3px;
+  margin: 0 0 7px 0;
+  border: none;
+  background: rgb(219, 219, 219);
+}
+.btn-footer {
+  background: #dc3545;
+  border-radius: 3px;
+  color: white;
+}

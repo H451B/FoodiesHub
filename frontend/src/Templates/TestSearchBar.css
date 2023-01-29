@@ -1,0 +1,37 @@
+/* .SearchBar {
+  margin-top: 20px;
+  margin-bottom: 100px;
+} */
+.Srow {
+  border-radius: 8px;
+  display: flex;
+  background: white;
+  /* width: 55%; */
+  /* margin-left: 30px; */
+  /* height: 60px; */
+  border: 2px solid #285954;
+}
+.Sinput {
+  padding-left: 8px;
+  border-radius: 6px;
+  width: 54%;
+  border: none;
+}
+.Sfilter {
+  height: 55px;
+  border-radius: 6px;
+  border-left: 2px solid var(--beta-color);
+  width: 18%;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  padding-left: 6px;
+}
+.SrchBtn {
+  border-radius: 6px;
+  background-color: #285954;
+  width: 10%;
+  border: none;
+  color: white;
+  font-size: 25px;
+}

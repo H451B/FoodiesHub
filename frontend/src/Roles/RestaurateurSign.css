@@ -1,0 +1,82 @@
+.r-sign {
+  background: linear-gradient(rgba(255, 225, 179, 0.952), white);
+}
+.r-heading {
+  /* background: rgba(255, 243, 225, 0.952); */
+  background: var(--beta-color);
+  color: white;
+  margin: 0px 0 20px 0px;
+  padding: 10px;
+  text-align: center;
+  -webkit-box-shadow: 0 8px 10px -6px #3b3b3b;
+  -moz-box-shadow: 0 8px 10px -6px #3b3b3b;
+  box-shadow: 0 8px 10px -9px #3b3b3b;
+}
+.vl {
+  background: rgb(146, 146, 146);
+  width: 1px;
+  margin: 20px 0 20px 0;
+}
+.r-body {
+  /* border: 1px solid black; */
+  margin: auto;
+  width: 100%;
+  display: flex;
+  margin-top: 5%;
+}
+.r-form {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.r-reg {
+  width: 100%;
+  background: linear-gradient(rgba(255, 225, 179, 0.952), white);
+}
+.reg-modal {
+  margin-top: 120px;
+}
+.r-log {
+  margin: auto;
+}
+.r-input {
+  padding-left: 10px;
+  width: 90%;
+  margin: 5px 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid rgba(134, 101, 50, 0.952);
+  height: 40px;
+}
+.r-btn {
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
+  background: var(--beta-color);
+  color: white;
+  margin-top: 7px;
+}
+.r-btn-2 {
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
+  background: #44352b;
+  color: white;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.forgot-link {
+  justify-self: flex-end;
+  color: var(--beta-color);
+  font-weight: bold;
+}
+.resSignImg {
+  padding: 20px;
+  margin: auto;
+  height: 70%;
+  width: 45%;
+}
+.resSignImg img {
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+.cart-box {
+  border-radius: 50%;
+  background-color: #285954;
+  height: 45px;
+  width: 45px;
+  margin-right: 0;
+  margin-left: auto;
+  text-align: center;
+  position: fixed;
+  right: 25px;
+  bottom: 50px;
+}
+.cart-box:hover {
+  background: #33635a;
+  height: 47px;
+  width: 47px;
+}
+.cart-icon {
+  margin: auto;
+  color: white;
+  font-size: 25px;
+}

@@ -36,13 +36,8 @@ public class Restaurant implements Serializable {
     private String latLongitude;
     private String picture;
 
-<<<<<<< HEAD
-    @ManyToOne
-    @JoinColumn(name = "rating_id")
-=======
     @OneToOne
     @JoinColumn(name = "restaurant_id")
->>>>>>> a0137ad78291b8969e529cc9a68a9a5a9292f4ee
     private RestaurantRating restaurantRatingId;
 
     // //CONSTRUCTOR
