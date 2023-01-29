@@ -3,6 +3,7 @@
   padding-right: 15px;
 }
 .header-container {
+  z-index:1;
   background: var(--beta-color);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0), 0 3px 3px 0 rgba(255, 188, 43, 0.3);
   position: fixed;

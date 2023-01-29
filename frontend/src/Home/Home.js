@@ -61,6 +61,7 @@ class Home extends Component {
                             {/* Top Food Section */}
                             <TopFood />
                         </div>
+
                         <div className="col-sm-6 ">
                             <div className="display-5 my-md-2 text-dark ">Top Restaurant</div>
                             {/* Top Restaurant Section */}

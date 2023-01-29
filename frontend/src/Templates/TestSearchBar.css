@@ -1,8 +1,9 @@
 /* .SearchBar {
-  margin-top: 20px;
-  margin-bottom: 100px;
+  /* margin-top: 20px; */
+  /* margin-bottom: 100px;
 } */
 .Srow {
+  height: 50px;
   border-radius: 8px;
   display: flex;
   background: white;
@@ -14,10 +15,10 @@
 .Sinput {
   padding-left: 8px;
   border-radius: 6px;
-  width: 54%;
+  width: 80%;
   border: none;
 }
-.Sfilter {
+/* .Sfilter {
   height: 55px;
   border-radius: 6px;
   border-left: 2px solid var(--beta-color);
@@ -26,11 +27,11 @@
   border-top: none;
   border-bottom: none;
   padding-left: 6px;
-}
+} */
 .SrchBtn {
   border-radius: 6px;
   background-color: #285954;
-  width: 10%;
+  width: 20%;
   border: none;
   color: white;
   font-size: 25px;
