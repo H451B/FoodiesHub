@@ -6,25 +6,34 @@ import FeedContents from './FeedContents'
 import './Feed.css'
 import MiniSearch from './MiniSearch'
 import Calendar from 'react-calendar'
-import {BsPlusLg} from "react-icons/bs";
+import { BsPlusLg } from "react-icons/bs";
 import { Modal } from 'reactstrap';
 
-const Event=[
-    'Bye Bye December','Victory Day Special','Birthday'
+const Event = [
+    'Bye Bye December', 'Victory Day Special', 'Birthday'
 ]
 
-const Tags=[
-    '#burger','#pizza','#serialgriller','#chickenexpress', '#icecream','#cake'
+const Tags = [
+    '#burger', '#pizza', '#serialgriller', '#chickenexpress', '#icecream', '#cake'
 ]
 
 
 function Feed() {
-    const [showFeedFloat,setShowFeedFloat]=useState(0);
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        fetch('https://127.0.0.1:5002/feed')
+            .then(res => res.json())
+            .then(data => setPosts(data))
+            .catch(err => console.log(err));
+    }, []);
+
+    const [showFeedFloat, setShowFeedFloat] = useState(0);
     useEffect(() => {
         window.onscroll = () => {
-            if(window.pageYOffset>227){
+            if (window.pageYOffset > 227) {
                 setShowFeedFloat(1)
-            }else{
+            } else {
                 setShowFeedFloat(0)
             }
         }
@@ -33,24 +42,25 @@ function Feed() {
     const [feedModalOpen, setFeedModalOpen] = useState(false);
     const toggle = () => setFeedModalOpen(!feedModalOpen);
 
-    const Events=[];
+    const Events = [];
     for (var i = 0; i < Event.length; i++) {
-        Events.push(<FeedEvent events={Event[i]}/>);
+        Events.push(<FeedEvent events={Event[i]} />);
     }
 
-    const AllTags=[];
+    const AllTags = [];
     for (var j = 0; j < Tags.length; j++) {
-        AllTags.push(<FeedTags tags={Tags[j]}/>);
+        AllTags.push(<FeedTags tags={Tags[j]} />);
     }
 
     return (
         <div className='feed-container'>
             {/* <Header/> */}
-            <div style={{height:"57px"}}><Header/></div>
+            <div style={{ height: "57px" }}><Header /></div>
 
+            {/* LEFT SIDE BAR */}
             <div className='row main-container'>
                 <div className='col feed-left'>
-                    <MiniSearch/>
+                    <MiniSearch />
 
                     <div className='feed-events-area'>
                         <h4>Events</h4>
@@ -63,48 +73,54 @@ function Feed() {
                     </div>
                 </div>
 
+
+                {/* {Middle SIDE BAR} */}
                 <div className='col-6 feed-main'>
-                    <AddToFeed/>
-                    <FeedContents/>
-                    <FeedContents/>
-                    <FeedContents/>
+                    <AddToFeed />
+
+                    {/* REST API FETCH DATA */}
+                    <FeedContents />
+                    {/* END REST API FETCH DATA */}
+
                 </div>
 
+
+                {/* RIGTH SIDE BAR */}
                 <div className='col feed-right'>
                     <div className='feed-right-calender'>
-                        <Calendar/>
+                        <Calendar />
                     </div>
-                    
-                    {showFeedFloat?(
+
+                    {showFeedFloat ? (
                         <button className='add-to-feed-float' onClick={toggle}>
-                            <BsPlusLg/>
+                            <BsPlusLg />
                         </button>
-                    ):(<div></div>)}
+                    ) : (<div></div>)}
                     <Modal
                         isOpen={feedModalOpen}
                         toggle={() => setFeedModalOpen(!feedModalOpen)}
                         className='float-add-to-feed-modal'
                     >
-                        <AddToFeed/>
+                        <AddToFeed />
                     </Modal>
-                    
+
                 </div>
             </div>
 
-            <Footer/>
+            <Footer />
         </div>
     )
 }
 
 export default Feed
 
-function FeedEvent({events}){
-    return(
+function FeedEvent({ events }) {
+    return (
         <div className='feed-event'>{events}</div>
     )
 }
-function FeedTags({tags}){
-    return(
+function FeedTags({ tags }) {
+    return (
         <div className='feed-tag'><p>{tags}</p></div>
     )
 }

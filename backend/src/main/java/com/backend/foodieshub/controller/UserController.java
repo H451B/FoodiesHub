@@ -28,33 +28,36 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     private UsersService userService;
-    
+
     @PostMapping("/signup")
-    public Response saveUser(@RequestBody Users user){
+    public Response saveUser(@RequestBody Users user) {
         boolean status = userService.saveUser(user);
         Response res = new Response();
-        if(status)res.setMessage("Registration Successful!");
-        else res.setMessage("User Already Exists or Try Again Later!");
+        if (status)
+            res.setMessage("Registration Successful!");
+        else
+            res.setMessage("User Already Exists or Try Again Later!");
         return res;
     }
-    
+
     @PostMapping("/signin")
-    public ResponseEntity<Object> getUser(@RequestBody Users user){
+    public ResponseEntity<Object> getUser(@RequestBody Users user) {
         String email = user.getEmail();
         String password = user.getPassword();
         Users login = userService.getUser(email, password);
         Response res = new Response();
         int __id = login.getId();
-        if(__id>0 ){
-        return new ResponseEntity(login,HttpStatus.OK);
+
+        if (__id > 0) {
+            return new ResponseEntity(login, HttpStatus.OK);
         }
-            res.setMessage("User Not Exists or Try again later!");
-            return new ResponseEntity(res,HttpStatus.OK);
-    } 
-    
+        res.setMessage("User Not Exists or Try again later!");
+        return new ResponseEntity(res, HttpStatus.NOT_FOUND);
+    }
+
     @GetMapping("/getusers")
-    public ResponseEntity<Object> getUsers(){
+    public ResponseEntity<Object> getUsers() {
         List<Users> userList = userService.getUserList();
-        return new ResponseEntity(userList,HttpStatus.OK);
+        return new ResponseEntity(userList, HttpStatus.OK);
     }
 }
