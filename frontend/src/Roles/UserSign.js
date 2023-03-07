@@ -74,7 +74,7 @@ function UserSign() {
                 .then(res => {
                     responseData = res.data;
                     getResponse();
-                    sessionStorage.setItem('user', JSON.stringify(responseData));
+                    sessionStorage.setItem('userId', JSON.stringify(responseData.id));
                     window.location.replace('/user');
                 }).catch(err => {
                     console.log('Something Wrong!: ', err);

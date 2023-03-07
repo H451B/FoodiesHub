@@ -10,6 +10,7 @@
 .Reactions {
   display: flex;
   border-top: 1px solid rgb(194, 194, 194);
+  border-bottom: 1px solid rgb(194, 194, 194);
 }
 .LeftReaction,
 .RightReaction {
