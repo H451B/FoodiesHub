@@ -1,12 +1,12 @@
 .HomeIntro {
-  padding-top: 10%;
+  padding-top: 13%;
   margin-left: 30px;
   margin-bottom: 20px;
 }
 
 .search-container- {
   margin-left: 30px;
-  width: 55%;
+  width: 52%;
   height: 60px;
 }
 
@@ -27,7 +27,7 @@ span {
   /* background-size: 10px; */
   /* height: 10px; */
   background-position: right bottom;
-  background-size: 550px;
+  background-size: 500px;
   background-repeat: no-repeat;
   /* background: linear-gradient(white, grey); */
   padding-left: 10px;
@@ -49,14 +49,12 @@ span {
     align-items: center;
     justify-content: center;
 
-
-    /* background: linear-gradient(white, grey); */
     padding-left: 7px;
     padding-right: 7px;
-    /* opacity: 0.5; */
     box-shadow: 0 3px 3px 0 rgba(255, 225, 179, 0.952),
       0 1px 1px 0 rgba(255, 237, 189, 0.952);
   }
+  
   .HomeIntro{
     display: flex;
     align-items: center;

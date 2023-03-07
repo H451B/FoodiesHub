@@ -28,6 +28,7 @@ function Feed() {
         axios.get('http://localhost:5002/feed')
             .then(res => {
                 setPosts(res.data);
+                // console.log(res.data);
             })
             .catch(err => console.log(err));
     }, []);
