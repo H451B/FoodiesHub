@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BiLike, BiDislike } from "react-icons/bi";
+import axios from 'axios';
 import './FeedContents.css'
 import './Feed'
 
@@ -7,12 +8,36 @@ function FeedContents(props) {
     const [likes, setLikes] = useState(0);
     const [userLiked, setUserLiked] = useState(false);
     const [comments, setComments] = useState([]);
-    const [userId, setUserId] = useState('');
+
+    const [allLikes, setAllLikes] = useState([]);
+
+    const [userId, setUserId] = useState(0);
+    // const [userId, setUserId] = useState('');
 
     useEffect(() => {
-        const id = localStorage.getItem('userId');
+        const id = sessionStorage.getItem('userId');
         setUserId(id);
     }, []);
+
+    useEffect(() => {
+        axios.get(`http://localhost:5002/feed/${props.data.id}/likes`)
+            .then(res => {
+                setAllLikes(res.data);
+            }).catch(err => console.log(err));
+
+    }, []);
+
+    useEffect(() => {
+        const checkUserLiked = () => {
+            for (let i = 0; i < allLikes.length; i++) {
+                if (Number(allLikes[i].id) === Number(userId)) {
+                    setUserLiked(true);
+                    break;
+                }
+            }
+        };
+        checkUserLiked();
+    }, [allLikes, userId]);
 
 
     const handleLike = () => {
@@ -23,26 +48,18 @@ function FeedContents(props) {
             setLikes(likes + 1);
             setUserLiked(true);
         }
-
-        // axios.post(`/api/posts/${post.id}/like`).then((response) => {
-        //     setLiked(true);
-        //   }).catch((error) => {
-        //     console.error(error);
-        //   });
     };
 
     return (
         <div className="FeedCard shadow-box-example z-depth-5">
             <h3>{props.data.user.username}</h3>
             <p>{props.data.postText}</p>
-            {/* {console.log(props.data.postText)} */}
 
             <div className="Reactions">
                 <div className="LeftReaction" onClick={handleLike}>
                     {userLiked ? 'Unlike' : <BiLike />}
-                    {/* <BiLike/> */}
-                    {/* {console.log(props.data.postText)} */}
-                    <div className="LCounter">{likes}</div>
+                    {/* {userId==allLikes[0].user.id ? 'Unlike' : 'Like'} */}
+                    <div className="LCounter">{allLikes.length}</div>
                 </div>
 
                 <div className="Seperator"></div>
@@ -52,7 +69,7 @@ function FeedContents(props) {
             </div>
 
             {/*All Comments Sections */}
-            <div className="post-card__comments">
+            {/* <div className="post-card__comments">
                 <ul>
                     {comments.map((comment) => (
                         <li key={comment.id}>
@@ -60,7 +77,7 @@ function FeedContents(props) {
                         </li>
                     ))}
                 </ul>
-            </div>
+            </div> */}
 
         </div>
     )

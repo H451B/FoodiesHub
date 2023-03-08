@@ -1,6 +1,7 @@
 package com.backend.foodieshub.model.UserCommunity;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,13 +19,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="community_comments")
-public class Comments {
+@Table(name="community_likes")
+public class CommunityLikes {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
-
-    private String commentText;
     
     @NotNull
     @ManyToOne
@@ -36,4 +35,3 @@ public class Comments {
     @JoinColumn(name = "user_id",referencedColumnName = "id", nullable = false)
     private Users user;
 }
-

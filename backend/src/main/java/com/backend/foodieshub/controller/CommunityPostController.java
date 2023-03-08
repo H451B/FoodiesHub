@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.backend.foodieshub.model.UserCommunity.CommunityLikes;
 import com.backend.foodieshub.model.UserCommunity.CommunityPost;
 import com.backend.foodieshub.service.CommunityPostService;
 
@@ -65,6 +66,14 @@ public class CommunityPostController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);    
         }
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    //GET ALL THE LIKES BY POST ID
+    @GetMapping("{postId}/likes")
+    ResponseEntity<List<CommunityLikes>> getLikesByPostId(@PathVariable Integer postId){
+        List<CommunityLikes> likes= communityPostService.getLikesByPostId(postId);
+        for(CommunityLikes i:likes){System.out.println(i);}
+        return new ResponseEntity<>(likes,HttpStatus.OK);
     }
 
 }

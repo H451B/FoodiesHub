@@ -18,11 +18,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="community_likes")
-public class Likes {
+@Table(name="community_comments")
+public class CommunityComments {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
+
+    private String commentText;
     
     @NotNull
     @ManyToOne
@@ -34,3 +36,4 @@ public class Likes {
     @JoinColumn(name = "user_id",referencedColumnName = "id", nullable = false)
     private Users user;
 }
+

@@ -76,7 +76,7 @@ class Home extends Component {
                 </div>
 
                 <div className="sec-3" style={{ display: "flex" }}>
-                    <div className="RightFeeds" style={{ width: "55%" }} >
+                    <div className="RightFeeds" style={{ width: "55%" }} key="daHood" >
                         {homeFeed}
                     </div>
                     <div className="LeftSticky" style={{ width: "45%" }}><RightNavigation /></div>
